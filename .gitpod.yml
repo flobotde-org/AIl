@@ -5,15 +5,15 @@ tasks:
       pip install --upgrade pip &&
       make install &&
       gp sync-done install
-    command: "mAIl create-user admin admin --superuser || exit 0"
+    command: "AIl create-user admin admin --superuser || exit 0"
 
   - name: "Run server"
     init: gp sync-await install
-    command: "mAIl run --port 8000"
+    command: "AIl run --port 8000"
 
   - name: "Open the Shell"
     init: gp sync-await install
-    command: "mAIl --help"
+    command: "AIl --help"
     openMode: "tab-after"
 
 # Ports to expose on workspace startup

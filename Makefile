@@ -26,20 +26,20 @@ install:          ## Install the project in dev mode.
 
 .PHONY: fmt
 fmt:              ## Format code using black & isort.
-	$(ENV_PREFIX)isort mAIl/
-	$(ENV_PREFIX)black -l 79 mAIl/
+	$(ENV_PREFIX)isort AIl/
+	$(ENV_PREFIX)black -l 79 AIl/
 	$(ENV_PREFIX)black -l 79 tests/
 
 .PHONY: lint
 lint:             ## Run pep8, black, mypy linters.
-	$(ENV_PREFIX)flake8 mAIl/
-	$(ENV_PREFIX)black -l 79 --check mAIl/
+	$(ENV_PREFIX)flake8 AIl/
+	$(ENV_PREFIX)black -l 79 --check AIl/
 	$(ENV_PREFIX)black -l 79 --check tests/
-	$(ENV_PREFIX)mypy --ignore-missing-imports mAIl/
+	$(ENV_PREFIX)mypy --ignore-missing-imports AIl/
 
 .PHONY: test
 test: lint        ## Run tests and generate coverage report.
-	$(ENV_PREFIX)pytest -v --cov-config .coveragerc --cov=mAIl -l --tb=short --maxfail=1 tests/
+	$(ENV_PREFIX)pytest -v --cov-config .coveragerc --cov=AIl -l --tb=short --maxfail=1 tests/
 	$(ENV_PREFIX)coverage xml
 	$(ENV_PREFIX)coverage html
 
@@ -89,7 +89,7 @@ switch-to-poetry: ## Switch to poetry package manager.
 	@poetry init --no-interaction --name=a_flask_test --author=rochacbruno
 	@echo "" >> pyproject.toml
 	@echo "[tool.poetry.scripts]" >> pyproject.toml
-	@echo "mAIl = 'mAIl.__main__:main'" >> pyproject.toml
+	@echo "AIl = 'AIl.__main__:main'" >> pyproject.toml
 	@cat requirements.txt | while read in; do poetry add --no-interaction "$${in}"; done
 	@cat requirements-test.txt | while read in; do poetry add --no-interaction "$${in}" --dev; done
 	@poetry install --no-interaction
@@ -97,7 +97,7 @@ switch-to-poetry: ## Switch to poetry package manager.
 	@mv requirements* .github/backup
 	@mv setup.py .github/backup
 	@echo "You have switched to https://python-poetry.org/ package manager."
-	@echo "Please run 'poetry shell' or 'poetry run mAIl'"
+	@echo "Please run 'poetry shell' or 'poetry run AIl'"
 
 
 # This project has been generated from rochacbruno/python-project-template

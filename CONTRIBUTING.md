@@ -1,6 +1,6 @@
 # How to develop on this project
 
-mAIl welcomes contributions from the community.
+AIl welcomes contributions from the community.
 
 **You need PYTHON3!**
 

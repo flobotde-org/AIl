@@ -1,4 +1,4 @@
-"""Python setup.py for mAIl package"""
+"""Python setup.py for AIl package"""
 import io
 import os
 from setuptools import find_packages, setup
@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 
 def read(*paths, **kwargs):
     """Read the contents of a text file safely.
-    >>> read("mAIl", "VERSION")
+    >>> read("AIl", "VERSION")
     '0.1.0'
     >>> read("README.md")
     ...
@@ -30,8 +30,8 @@ def read_requirements(path):
 
 
 setup(
-    name="mAIl",
-    version=read("mAIl", "VERSION"),
+    name="AIl",
+    version=read("AIl", "VERSION"),
     description="project_description",
     url="https://github.com/author_name/project_urlname/",
     long_description=read("README.md"),
@@ -40,7 +40,7 @@ setup(
     packages=find_packages(exclude=["tests", ".github"]),
     install_requires=read_requirements("requirements.txt"),
     entry_points={
-        "console_scripts": ["mAIl = mAIl.__main__:main"]
+        "console_scripts": ["AIl = AIl.__main__:main"]
     },
     extras_require={"test": read_requirements("requirements-test.txt")},
 )

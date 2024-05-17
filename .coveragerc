@@ -1,8 +1,8 @@
 [run]
-source = mAIl
+source = AIl
 
 [report]
 omit =
     */python?.?/*
     */site-packages/nose/*
-    mAIl/__main__.py
+    AIl/__main__.py

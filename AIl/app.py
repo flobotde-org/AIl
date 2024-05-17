@@ -1,5 +1,5 @@
 """
-mAIl base module.
+AIl base module.
 """
 from fastapi import FastAPI
 

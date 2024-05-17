@@ -7,11 +7,11 @@ from typer.testing import CliRunner
 
 # This next line ensures tests uses its own database and settings environment
 os.environ["FORCE_ENV_FOR_DYNACONF"] = "testing"  # noqa
-# WARNING: Ensure imports from `mAIl` comes after this line
+# WARNING: Ensure imports from `AIl` comes after this line
 
-from mAIl.app import app
-from mAIl.cli import cli
-from mAIl.config import settings
+from AIl.app import app
+from AIl.cli import cli
+from AIl.config import settings
 
 
 @pytest.fixture(autouse=True)

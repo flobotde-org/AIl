@@ -14,34 +14,34 @@ project_description
 
 ### from source
 ```bash
-git clone https://github.com/author_name/project_urlname mAIl
-cd mAIl
+git clone https://github.com/author_name/project_urlname AIl
+cd AIl
 make install
 ```
 
 ## Executing
 
 ```bash
-$ mAIl run --port 8080
+$ AIl run --port 8080
 ```
 
 or
 
 ```bash
-python -m mAIl run --port 8080
+python -m AIl run --port 8080
 ```
 
 or
 
 ```bash
-$ uvicorn mAIl:app
+$ uvicorn AIl:app
 ```
 
 ## CLI
 
 ```bash
-❯ mAIl --help
-Usage: mAIl [OPTIONS] COMMAND [ARGS]...
+❯ AIl --help
+Usage: AIl [OPTIONS] COMMAND [ARGS]...
 
 Options:
   --install-completion [bash|zsh|fish|powershell|pwsh]
@@ -60,8 +60,8 @@ Commands:
 ### Creating a user
 
 ```bash
-❯ mAIl create-user --help
-Usage: mAIl create-user [OPTIONS] USERNAME PASSWORD
+❯ AIl create-user --help
+Usage: AIl create-user [OPTIONS] USERNAME PASSWORD
 
   Create user
 
@@ -77,7 +77,7 @@ Options:
 **IMPORTANT** To create an admin user on the first run:
 
 ```bash
-mAIl create-user admin admin --superuser
+AIl create-user admin admin --superuser
 ```
 
 ### The Shell
@@ -85,7 +85,7 @@ mAIl create-user admin admin --superuser
 You can enter an interactive shell with all the objects imported.
 
 ```bash
-❯ mAIl shell       
+❯ AIl shell       
 Auto imports: ['app', 'settings', 'User', 'engine', 'cli', 'create_user', 'select', 'session', 'Content']
 
 In [1]: session.query(Content).all()
@@ -99,12 +99,12 @@ Out[3]: [Content(text='string', title='string', created_time='2021-09-14T19:25:0
 
 ## API
 
-Run with `mAIl run` and access http://127.0.0.1:8000/docs
+Run with `AIl run` and access http://127.0.0.1:8000/docs
 
 ![](https://raw.githubusercontent.com/rochacbruno/fastapi-project-template/master/docs/api.png)
 
 
-**For some api calls you must authenticate** using the user created with `mAIl create-user`.
+**For some api calls you must authenticate** using the user created with `AIl create-user`.
 
 ## Testing
 
@@ -137,18 +137,18 @@ tests/test_user_api.py::test_user_create PASSED                           [100%]
 ----------- coverage: platform linux, python 3.9.6-final-0 -----------
 Name                              Stmts   Miss  Cover
 -----------------------------------------------------
-mAIl/__init__.py              4      0   100%
-mAIl/app.py                  16      1    94%
-mAIl/cli.py                  21      0   100%
-mAIl/config.py                5      0   100%
-mAIl/db.py                   10      0   100%
-mAIl/models/__init__.py       0      0   100%
-mAIl/models/content.py       47      1    98%
-mAIl/routes/__init__.py      11      0   100%
-mAIl/routes/content.py       52     25    52%
-mAIl/routes/security.py      15      1    93%
-mAIl/routes/user.py          52     26    50%
-mAIl/security.py            103     12    88%
+AIl/__init__.py              4      0   100%
+AIl/app.py                  16      1    94%
+AIl/cli.py                  21      0   100%
+AIl/config.py                5      0   100%
+AIl/db.py                   10      0   100%
+AIl/models/__init__.py       0      0   100%
+AIl/models/content.py       47      1    98%
+AIl/routes/__init__.py      11      0   100%
+AIl/routes/content.py       52     25    52%
+AIl/routes/security.py      15      1    93%
+AIl/routes/user.py          52     26    50%
+AIl/security.py            103     12    88%
 -----------------------------------------------------
 TOTAL                               336     66    80%
 
@@ -170,7 +170,7 @@ make fmt   # formats the code
 This project uses [Dynaconf](https://dynaconf.com) to manage configuration.
 
 ```py
-from mAIl.config import settings
+from AIl.config import settings
 ```
 
 ## Acessing variables
@@ -199,14 +199,14 @@ dynaconf_merge = true
 echo = true
 ```
 
-> `dynaconf_merge` is a boolean that tells if the settings should be merged with the default settings defined in mAIl/default.toml.
+> `dynaconf_merge` is a boolean that tells if the settings should be merged with the default settings defined in AIl/default.toml.
 
 ### As environment variables
 ```bash
-export mAIl_KEY=value
-export mAIl_KEY="@int 42"
-export mAIl_KEY="@jinja {{ this.db.uri }}"
-export mAIl_DB__uri="@jinja {{ this.db.uri | replace('db', 'data') }}"
+export AIl_KEY=value
+export AIl_KEY="@int 42"
+export AIl_KEY="@jinja {{ this.db.uri }}"
+export AIl_DB__uri="@jinja {{ this.db.uri | replace('db', 'data') }}"
 ```
 
 ### Secrets
@@ -220,7 +220,7 @@ can read those variables.
 ### Switching environments
 
 ```bash
-mAIl_ENV=production mAIl run
+AIl_ENV=production AIl run
 ```
 
 Read more on https://dynaconf.com

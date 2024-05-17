@@ -3,4 +3,4 @@ COPY . /app
 WORKDIR /app
 RUN pip install .
 EXPOSE 8000
-CMD ["mAIl", "run", "--port", "8000"]
+CMD ["AIl", "run", "--port", "8000"]
