@@ -9,25 +9,12 @@
   "extensions.autoUpdate": false,
   "files.autoSave": "onFocusChange",
   "files.exclude": {
-    "**/*.egg-info": true,
-    ".gitpod.yml": true,
-    "ABOUT_THIS_TEMPLATE.md": true,
-    ".coveragerc": true,
-    "HISTORY.md": true,
-    "LICENSE": true,
-    "MANIFEST.in": true,
-    "mkdocs.yml": true,
-    "docs/": true,
-    ".github/": true,
-    ".vscode/": true,
-    "CONTRIBUTING.md": true,
-    "**/__pycache__": true,
-    ".gitignore": true,
-    "Containerfile": true,
-    "Makefile": true,
-    "htmlcov": true,
-    ".mypy_cache": true,
-    "coverage.xml": true,
-    ".pytest_cache": true
-  }
+    "**/.DS_Store": false,
+    "**/.git": false,
+    "**/.hg": false,
+    "**/.svn": false,
+    "**/CVS": false,
+    "**/Thumbs.db": false
+  },
+  "explorer.excludeGitIgnore": true
 }

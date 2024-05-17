@@ -1,6 +1,6 @@
 # How to develop on this project
 
-project_name welcomes contributions from the community.
+mAIl welcomes contributions from the community.
 
 **You need PYTHON3!**
 
