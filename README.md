@@ -1,4 +1,4 @@
-# ∰ mAIl - Your mobility Application Integration layer ∰
+# ∰ AIl- your Application Integration layer ∰
 
 [![codecov](https://codecov.io/gh/author_name/project_urlname/branch/main/graph/badge.svg?token=project_urlname_token_here)](https://codecov.io/gh/author_name/project_urlname)
 [![CI](https://github.com/author_name/project_urlname/actions/workflows/main.yml/badge.svg)](https://github.com/author_name/project_urlname/actions/workflows/main.yml)
